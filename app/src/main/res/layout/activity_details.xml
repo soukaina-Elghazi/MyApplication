@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".details">
+
+
+    <ImageView
+        android:id="@+id/product_image_details"
+        android:layout_width="wrap_content"
+        android:layout_height="260dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/adidas_questar_shoes" />
+
+    <TextView
+        android:id="@+id/product_name_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_image_details"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:text="Product Name"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/product_description_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name_details"
+        android:layout_marginTop="71dp"
+        android:gravity="center"
+        android:text="Product Description"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/product_price_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_description_details"
+        android:layout_marginTop="62dp"
+        android:gravity="center"
+        android:text="Product Taille"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/increment_btn2"
+        android:layout_width="123dp"
+        android:layout_height="74dp"
+        android:layout_above="@+id/pd_add_to_cart_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/tx_display2"
+        android:layout_width="116dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/pd_add_to_cart_button"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="45dp"
+        android:layout_toStartOf="@+id/increment_btn2"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/decrement_btn2"
+        app:layout_constraintEnd_toStartOf="@+id/increment_btn2"
+        app:layout_constraintTop_toTopOf="@+id/decrement_btn2" />
+
+    <ImageButton
+        android:id="@+id/decrement_btn2"
+        android:layout_width="130dp"
+        android:layout_height="69dp"
+        android:layout_above="@+id/pd_add_to_cart_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="42dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/remove"
+        />
+
+
+    <Button
+        android:id="@+id/pd_add_to_cart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Add to Cart"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+</RelativeLayout>
